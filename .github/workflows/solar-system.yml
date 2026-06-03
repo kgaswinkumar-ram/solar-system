@@ -25,6 +25,11 @@ jobs:
     
         - name: Install Dependencies
           run: npm install
+
+        - name: Verify Variables
+          run: |
+           echo "MONGO_URI=$MONGO_URI"
+           echo "MONGO_USERNAME=$MONGO_USERNAME"
     
         - name: Unit Testing
           run: npm test
